@@ -1,0 +1,203 @@
+<?php 
+include('mise_en_page_debut.php')
+?>
+
+<HTML>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"></meta>
+		
+			<script type="text/javascript">
+				window.onload=montre;
+				function montre(id) {
+					var d = document.getElementById(id);
+				for (var i = 1; i<=10; i++) {
+					if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+							}
+				if (d) {d.style.display='block';}
+				}
+			</script>
+			<script language="javascript" type="text/javascript">
+		             function writeMail() {
+		                   document.write('<a href="mail');
+		                   document.write('to:');
+		                   document.write(login);
+		                   document.write('@');
+		                   document.write('math.');
+		                   document.write('u-psud.fr">');
+		                   document.write(name);
+		                   document.write('<');
+		                  document.write('/a>');
+																																        }
+			</script>
+		<link rel="stylesheet" type="text/css" href="./classgao.css">
+
+	</head>
+
+<body>
+	<div id='global'>
+
+<div id='contenu'>
+<!-- Choix de la langue -->
+	<div align="center">
+        <a href="./index.html"><img src="images/english.png" border="1" width="50px" height="35px" hspace="8"></a>
+        <a href="./index_french.html"><img src="images/francais.png" border="1" width="50px" height="35px" hspace="8"></a>
+	</div>
+<hr>
+<!-- Informations personnelles -->
+<table width="100%" cellspacing="0">
+	<tr>
+		<td width="5%" align="right">
+		</td>
+		<td width="60%" align="left">
+<!-- Adresse -->
+			<div style="margin-left:20px; margin-bottom:-20px;"><font size="+3"><b>Ziyang GAO</b></font></div>
+			<br/>
+			<img src="images/nom.png" border="0" width="180px" style="margin-left:20px; margin-bottom:10px; margin-top:10px;">
+			<br/>
+			<font size="+1">Professeur (W3) &agrave; Leibniz University Hannover</font>
+			<br/>
+            <br/>
+            <font size="+1">A partir de l'automne 2024, je serai professeur &agrave; UCLA.</font>
+            <br/>
+			<br/>
+			<br/>
+			<font><i>Courrier &eacute;lectronique&nbsp;</i>: ziyang.gao AT math.uni-hannover.de </font>
+			<br>
+			<font><i>Adresse&nbsp;</i>: IAZD, Leibniz University Hannover, Welfengarten 1, 30167 Hanovre, Allemagne.
+				<br/>
+			<font><i>Bureau&nbsp;</i>: A412.
+				<br/>
+            <!--            <noscript>
+            </noscript>			</font> <font><i>T&eacute;l&eacute;phone&nbsp;</i>:  </font>
+-->
+<!-- Fin adresse -->
+		</td>
+		<td width="30%" align="right">
+<!-- Votre photo -->
+		<img src="images/photo_fr.jpeg" width=225 height=320 hspace="0" vspace="0" alt="Photo" align="bottom" border="1">
+<!-- Fin votre photo -->
+			</td>
+			<td width="5%" align="left">
+			</td>
+		</tr>
+</table>
+<!-- Fin informations personnelles -->
+<hr>
+<!-- Contenu -->
+
+
+
+<h3>Domaine de recherche</h3>
+
+Mon domaine de recherche est la g&eacute;om&eacute;trie arithm&eacute;tique. Je travaille surtout sur les vari&eacute;t&eacute;s de Shimura (pures et mixtes), les vari&eacute;t&eacute;s ab&eacute;liennes, les cycles, et la g&eacute;om&eacute;trie diophantienne.
+
+
+<h3>Grants</h3>
+My research is supported by <a href="https://cordis.europa.eu/project/id/945714">ERC-Starting-Grant n. 945714 UnIntUniBd</a>. Deux groupes de travail : Points rationnels et uniformit&eacute; (2020-2021, IMJ-PRG, Paris), Adelic line bundles over quasi-projective varieties (2021-2022, Hanovre, en collaboration avec B&acirc;le).<br>
+
+
+<h3>Publications et Pr&eacute;publications</h3> 
+<em> Les fichiers ici peuvent &ecirc;tre l&eacute;g&egrave;rement diff&eacute;rents des versions publi&eacute;es. </em>
+<ol>
+<div id='news'>
+<li>
+    (avec Shouwu Zhang) <a href="./articles/HP.pdf">Heights and periods of algebraic cycles in families</a>, preprint 2024.
+</li>
+<li>
+    Compte-rendu: <a href="./articles/ALBBigness.pdf">Bigness of the tautological line bundle and degeneracy loci in families of abelian varieties</a>, 2024.
+</li>
+<!-- <li>
+    (with Emmanuel Ullmo) Hodge cycles and quadratic relations between holomorphic periods in CM abelian varieties, in preparation.
+</li> -->
+<li>
+    (avec Emmanuel Ullmo et Andrei Yafaev) <a href="./articles/Wuwu.pdf">Bi-<SPAN STYLE="text-decoration:overline">Q</SPAN> -structure on Hermitian symmetric spaces and quadratic relations between CM periods</a>, preprint 2024.
+</li>
+<li>
+    (avec Philipp Habegger) <a href="./articles/RMM.pdf">The Relative Manin-Mumford Conjecture</a>, preprint 2023.
+</li>
+<li>
+    (avec Philipp Habegger) <a href="./articles/nondeg.pdf">Degeneracy loci in the universal family of abelian varieties</a>, &agrave; para&icirc;tre dans Journal of Number Theory (JNT Prime), Proceedings of the Second JNT Biennial Conference 2022, en ligne 2024, doi.org/10.1016/j.jnt.2024.05.015.
+</li>
+<li>
+(avec Tangli Ge et Lars K&uuml;hne) <a href="./articles/UML.pdf">The Uniform Mordell-Lang Conjecture</a>, preprint 2021.
+</li>
+<li>
+   Survol : <a href="./articles/SurveyUnifML.pdf">Recent developments of the Uniform Mordell-Lang Conjecture</a>, preprint 2021.
+</li>
+<li>
+(avec Bruno Klingler) <a href="./articles/ASVMHS.pdf">The Ax-Schanuel conjecture for variations of mixed Hodge structures</a>, Math. Ann., vol. 388, p. 3847-3895, 2024 (en ligne en 2023).
+</li>
+<li>
+(avec Vesselin Dimitrov et Philipp Habegger) <a href="./articles/ConseqRelBog.pdf">A consequence of the relative Bogomolov conjecture</a>, Journal of Number Theory (JNT Prime), vol. 230 (Proceedings of the First JNT Biennial Conference 2019), p. 146-160, 2022.
+</li>
+<li>
+(avec Vesselin Dimitrov et Philipp Habegger) <a href="./articles/UnifML.pdf">Uniformity in Mordell-Lang for curves</a>, Annals of Mathematics, vol. 194, p. 237-298, 2021.
+</li>
+<li>
+(avec Vesselin Dimitrov et Philipp Habegger) <a href="./articles/UnifML1p.pdf">Uniform bound for the number of rational points on a pencil of curves</a>, IMRN, vol. 2021, p. 1138-1159, 2021 (publi&eacute; en ligne en d&eacute;cembre 2019), doi.org/10.1093/imrn/rnz248.
+</li>
+<li>
+<a href="./articles/BettiRank.pdf">Generic rank of Betti map and unlikely intersections</a>, Compositio Mathematica, vol. 156, p. 2469-2509, 2020. <a href="./articles/ErrataBettiRank.pdf">Erratum</a>
+</li>
+<li>
+(avec Serge Cantat, Philipp Habegger et Junyi Xie) <a href="./articles/GBC.pdf">The Geometric Bogomolov Conjecture</a>, Duke Math. J., vol. 170, p. 247-277, 2021. doi:10.1215/00127094-2020-0044.
+</li>
+<li>
+<a href="./articles/mixedAS.pdf">Mixed Ax-Schanuel for the universal abelian varieties and some applications</a>, Compositio Mathematica, vol. 156, p. 2263-2297, 2020.
+</li>
+<li>
+(avec Rafael von K&auml;nel et Lucia Mocz) Faltings Heights and L-functions, dans <a href="https://press.princeton.edu/titles/30376.html">Arithmetic and Geometry: Ten Years in Alpbach</a> edit&eacute; par Gisbert W&uuml;stholz and Clemens Fuchs, Annals of Mathematics Studies 202, Princeton U. Press.
+</li>
+<li>
+Appendice &agrave; <a href="./articles/ACZ.pdf">The Betti map associated to a section of an abelian scheme</a> (Yves Andr&eacute;, Pietro Corvaja and Umberto Zannier), Inventiones mathematicae, vol. 222, pp. 161–202, 2020.
+</li>
+<li>
+(avec Philipp Habegger) <a href="./articles/ffbogomolov.pdf">Heights in families of abelian varieties and the Geometric Bogomolov Conjecture</a>, Annals of Mathematics, vol. 189, p. 527-604, 2019.
+</li>
+<li>
+<a href="./articles/EMSV.pdf">Enlarged mixed Shimura varieties, bi-algebraic system and some Ax type transcendental results</a>, Forum of Mathematics, Sigma, vol. 7, 2019, e16, 
+<a href="https://doi.org/10.1017/fms.2019.10">doi</a>.
+ <br> - <a href="./articles/Oberwolfach2016.pdf">Bi-algebraic system on the universal vectorial extension</a> Oberwolfach report No. 21, 2016.</br>
+</li>
+<li>
+<a href="./articles/The mixed Andre-Oort conjecture.pdf">About the mixed Andr&eacute;-Oort conjecture: reduction to a lower bound for the pure case</a>, Comptes rendus Math&eacute;matiques, vol. 354, p. 659-663, 2016.
+</li>
+<li>
+<a href="./articles/AndrePinkZannier.pdf">A special point problem of Andr&eacute;-Pink-Zannier in the universal family of abelian varieties</a>, Ann. Sc. Norm. Super. Pisa Cl. Sci., vol. XVII, p. 231-266, 2017.
+</li>
+	<li>
+	<a href="./articles/MixedAxLindemann.pdf">Towards the Andr&eacute;-Oort conjecture for mixed Shimura varieties: the Ax-Lindemann theorem and lower bounds for Galois orbits of special points</a>, Journal f&uuml;r die reine und angewandte Mathematik (Crelle), vol. 732, p. 85-146, 2017 (publi&eacute; en ligne en mars 2015).
+	</li>
+</div>
+</ol>
+
+<h3>Miscellaneous</h3>
+<ol>
+<div id='news'>
+<li>
+<a href="./articles/Comparison of galois orbits of special points of shimura varieties.pdf">Comparison of Galois orbits of special points of Shimura varieties</a>, 2013.
+</li>
+</div>
+</ol>
+
+<h3>Dissertations</h3>
+<ol>
+<div id='news'>
+<li> HDR (Habilitation &agrave; diriger les recherches) <a href="./articles/hdr.pdf">Distribution of points on varieties: various aspects and interactions</a>, soutenance le 28 juin 2021. Les <a href="./articles/DistPt_Gao.pdf">diapositives</a>.
+</li>
+<li> Th&egrave;se de doctorat <a href="./articles/PhD.pdf">Le th&eacute;or&egrave;me d'Ax-Lindemann mixte et ses applications &agrave; la conjecture de Zilber-Pink</a> (soutenance le 24 novembre 2014) sous la direction d'Emmanuel Ullmo et Bas Edixhoven.
+</li>
+</div>
+</ol>
+
+ <h3>Enseignements</h3>
+<ol>
+<li>
+Voici un <a href="./teaching/general information.html">lien</a> aux sujets des enseignements que j'ai faits. 
+</li>
+</ol>
+
+
+
+<br/>
+<!-- Fin contenu -->
