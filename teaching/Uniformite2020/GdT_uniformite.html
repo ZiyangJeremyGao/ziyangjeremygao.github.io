@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:import href="splitdate.xsl" />
+  <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+
+  <xsl:template match="/">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <title>Groupe de travail « Points rationnels et uniformité »</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-language" content="fr"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <link rel="stylesheet" href="gdt.css" type="text/css" media="screen" title="default"/>
+    <script type="text/javascript" src="show_hide.js"> </script>
+    <script type="text/javascript" src="stnj.js"> </script>
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+          jax: ["input/TeX", "output/HTML-CSS"],
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true },
+          TeX: {
+            Macros: {
+              C: '{\\mathbb{C}}',
+              R: '{\\mathbb{R}}',
+              Q: '{\\mathbb{Q}}',
+              Z: '{\\mathbb{Z}}',
+              K: '{\\mathbb{K}}',
+              k: '{\\mathbb{k}}',
+              F: '{\\mathbb{F}}',
+              N: '{\\mathbb{N}}',
+              A: '{\\mathbb{A}}',
+              X: '{\\mathcal{X}}',
+              disc: '{\\mathrm{disc}}',
+              }
+              }
+          });
+        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"> </script>
+  </head>
+
+
+
+ <body onload="javascript:highlight_next(self)">
+      
+      <div id="wrapper">
+      <div id="header">
+      
+      <span style="" lang="FR"></span>
+
+<!-- <div style="background-color:#D7FF33; width:60%; margin: auto;"> -->
+      <h1 style="text-align:center;"><span>Groupe de travail « Points rationnels et uniformité »<br>
+        </span></h1>
+      <h3 style="text-align:center;"><span>Organisateurs : <a href="https://webusers.imj-prg.fr/~anna.cadoret/">Anna Cadoret</a>, <a href="https://www.iazd.uni-hannover.de/en/institute/team/ziyang-gao/?tx_t3luhepv_t3luhepvpershomepage%5Baction%5D=persHomepage&tx_t3luhepv_t3luhepvpershomepage%5Bcontroller%5D=Organisation">Ziyang Gao</a>, <a href="https://webusers.imj-prg.fr/~marc.hindry/">Marc Hindry</a>, <a href="https://webusers.imj-prg.fr/loic.merel">Loïc Merel</a>
+      </span></h3>
+      </div>
+<!-- <div style="width:60%; margin: auto;"> -->
+<div>
+ <dl>
+    <h3>Informations pratiques (2021)</h3>
+ <p>
+ <dd>
+  Horaire : mercredi 15h-17h 2021 (contre jeudi 11h-13h en 2020).
+   </dd>
+    <dd>
+Lieu : salle 502, 5ème étage, couloir 15-25, Jussieu, Paris (contre 15-16-413 en 2020).
+    </dd>
+    <dd>
+Langue : français ou anglais, selon l'oratrice ou l'orateur.
+    </dd>
+          </dl>
+        </p>
+</div>
+<div id='content'>
+    <p>
+          <h3 style="text-align:center;">Programme</h3>
+          Le but de ce groupe de travail est d'étudier des résultats récents sur les points rationnels des variétés définies sur les corps de nombres ou les anagogues géométriques (souvent plus traçables) de ces questions. Dans la première partie de ce groupe de travail, nous allons édudier deux types de résultats, qui se traduisent en la « pauvreté » des points rationnels dans les variétés de modules, et anisi sont liés aux conjectures célèbres de Lang.
+          <ul class="ul1">
+                  <li class="li2">Partie I : Conséquences des conjectures de Lang sur des resultats d'uniformité des points rationnels.</li>
+                  <li class="li2">Partie II : La démonstration récente de Dimitrov-Gao-Habegger d'une conjecture de Mazur sur la borne du nombre des points rationnels sur les courbes ($\#C(K) \le c(g,[K:\mathbb{Q}])^{1+\mathrm{rang}J(K)}$).</li>
+                  <li class="li2">Partie III : La généralisation par Cadoret-Tamagawa des résultats de Manin et de Frey sur la conjecture de torsion aux pinceaux de variétés abéliennes de dimension supérieure.</li>
+                  <li class="li2">Partie IV : La démonstration récente de la conjecture de Manin-Mumford uniforme par Kühne. Cette démonstration est fortement liée à la partie II.</li>
+          </ul>
+        Une version plus détaillée du programme se trouve <a href="./PointsRationnelsUniformite.pdf">ici</a> (en anglais).
+        </p>
+</div>
+<div>
+<!-- <div style="width:60%; margin: auto;"> -->
+    <h3 style="text-align:center;">Séances</h3>
+        <table id="liste">
+          <tr id="15-10-20">
+            <td class="date">15 octobre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                <strong>Marc Hindry</strong>
+                </dd>
+                <dd>
+                    Session I-1 : <em>Rappel de la dimension de Kodaira. Donner les versions arithmétique et géométrique de la conjecture de Lang. Rappel des résultats connus. Donner l'application (sans preuve !) aux points de degré borné sur les coubes de grande gonalité.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/I-1.pdf">ici</a> pour les notes.
+                </dd>
+            </td>
+          </tr>
+          <tr id="22-10-20">
+            <td class="date">22 octobre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                <strong>Haohao Liu</strong>
+                </dd>
+                <dd>
+                    Session I-2 : <em>Caporaso-Harris-Mazur.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/I-2.pdf">ici</a> pour les notes.
+                </dd>
+            </td>
+          </tr>
+          <tr id="29-10-20">
+            <td class="date">29 octobre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Camille Amoyal</strong>
+                </dd>
+                <dd>
+                    Session II-1 : <em>L'énoncé de Dimitrov-Gao-Habegger. Une introduction à la machine des hauteurs. Comparaison de la hauteur de Weil et la hauteur de Néron-Tate dans une famille de variétés abéliennes.</em>
+                </dd>
+                <dd>
+                    Nous nous référons à la Part B (B.1 à B.5) du <a href="https://link.springer.com/book/10.1007/978-1-4612-1210-2">livre de Hindry-Silverman</a> pour la machine des hauteurs, et le Theorem A de <a href="https://gdz.sub.uni-goettingen.de/id/PPN243919689_0342?tify={%22pages%22:[205],%22view%22:%22info%22}">l'article de Silverman</a> pour la comparaison dont l'on a besoin.
+                </dd>
+            </td>
+          </tr>
+          <tr id="05-11-20">
+            <td class="date">5 novembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Ziyang Gao</strong>
+                </dd>
+                <dd>
+                    Session II-2 : <em>La démonstration de la conjecture de Mordell par Vojta. Ici nous allons prendre la preuve simplifiée par Bombieri en supposant les estimations de zéro.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/II-2.pdf">ici</a> pour les notes.
+                </dd>
+            </td>
+          </tr>
+          <tr id="12-11-20">
+            <td class="date">12 novembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Sinnou David</strong>
+                </dd>
+                <dd>
+                    Session II-3 : <em>L'analyse des « estimations de zéro dans l'approximation diophantienne ». Il s'agit d'un ou tout parmi le lemme de Roth, le lemme de Dyson et le théorème du produit de Faltings.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/II-3.pdf">ici</a> pour les notes.
+                </dd>
+            </td>
+          </tr>
+          <tr id="19-11-20">
+            <td class="date">19 novembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Marc Hindry</strong>
+                </dd>
+                <dd>
+                    Session I-4.1 : <em>Introduction aux espaces de modules (grossiers et fins). Rappel de $\mathbb{M}_g$, $\mathbb{A}_g$, la semi-stabilité, etc.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/I-4.pdf">ici</a> pour les notes.
+                </dd>
+            </td>
+          </tr>
+          <tr id="26-11-20">
+            <td class="date">26 novembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Elie Studnia</strong>
+                </dd>
+                <dd>
+                    Session II-4 : <em>Ramener la borne conjecturale de Mazur à une inégalité de hauteurs dans la variété abélienne universelle. La clé est un nouveau « principe d'écart (Gap Principle) »,  la Proposition 7.1 de DGH.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="03-12-20">
+            <td class="date">3 d&eacute;cembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Yunqing Tang</strong>
+                </dd>
+                <dd>
+                    Session II-5 : <em>Préparatifs de la démonstration de l'inégalité de hauteurs mentionnée ci-dessus : une construction analytique de la variété abélienne universelle $\mathfrak{A}_g$, l'application de Betti et la forme de Betti. La définition des sous-variétés non-dégénérées. Schéma de la preuve de
+                         cette inégalité de hauteurs pour les sous-variétés non-dégénérées.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="10-12-20">
+            <td class="date">10 d&eacute;cembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Yunqing Tang</strong>
+                </dd>
+                <dd>
+                    Session II-6 :<em> Preuve de l'inégalité de hauteurs mentionnée ci-dessus. </em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="17-12-20">
+            <td class="date">17 d&eacute;cembre 2020
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Ziyang Gao</strong>
+                </dd>
+                <dd>
+                    Session II-7 : <em>La non-dégénérescence de $\mathcal{D}_M(\mathfrak{C}_S^{[M+1]})$, 1ère partie : ramener à un problème d'intersection atypique sur $\mathfrak{A}_g$. La géométrie bi-algébrique et le théorème d'Ax-Schanuel, surtout pour $\mathfrak{A}_g$ (sans preuve !), et leur application. Les sous-variétés spéciales et faiblement spéciales. La description géométrique des sous-variétés faiblement spéciales de $\mathfrak{A}_g$ (preuve si le temps permet). </em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="10-02-21">
+            <td class="date">10 f&eacute;vrier 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Marc Hindry</strong>
+                </dd>
+                <dd>
+                    Session III-1 :<em> Module de Tate l-adique des variétés abéliennes. Enoncer les théorèmes d'UOI (image ouverte uniforme) dans ce contexte et l'application à la borne uniforme pour la torsion.</em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/III-1.pdf">ici</a> pour les notes de l'exposé et <a href="./GdT_uniformite/III-1bis.pdf">ici</a> pour les notes des compléments.
+                </dd>
+            </td>
+          </tr>
+          <tr id="17-02-21">
+            <td class="date">17 f&eacute;vrier 2021 (Attention : salle 15-16-413 !)
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Jinzhao Pan</strong>
+                </dd>
+                <dd>
+                    Session III-2 :<em> Groupe fondamental d'une variété. Introduction à la cohomologie l-adique, y compris la construction, le théorème de changement de base propre et lisse, et le théorème de semisimplicité. </em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/III-2.pdf">ici</a> pour les notes (en français).
+                </dd>
+                <dd>
+                    Click <a href="./GdT_uniformite/Pan.pdf">here</a> for the notes prepared by Jinzhao Pan (in English).
+                </dd>
+            </td>
+          </tr>
+          <tr id="24-02-21">
+            <td class="date">24 f&eacute;vrier 2021 (Attention : salle 15-16-413 !)
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Jinzhao Pan</strong>
+                </dd>
+                <dd>
+                    Session III-2 (continuation) :<em> Groupe fondamental d'une variété. Introduction à la cohomologie l-adique, y compris la construction, le théorème de changement de base propre et lisse, et le théorème de semisimplicité. </em>
+                </dd>
+                <dd>
+                    Cliquer <a href="./GdT_uniformite/III-2.pdf">ici</a> pour les notes (en français).
+                </dd>
+                <dd>
+                    Click <a href="./GdT_uniformite/Pan.pdf">here</a> for the notes prepared by Jinzhao Pan (in English).
+                </dd>
+            </td>
+          </tr>
+          <tr id="03-03-21">
+            <td class="date">03 mars 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Antoine Sedillot</strong>
+                </dd>
+                <dd>
+                    Session III-3 :<em> Introduction aux groupes de Lie l-adiques, notamment la définition, les propriétés de base, les théorèmes fondamentaux et les estimations de Serre et Oesterlé sur le nombre de points sur la réduction modulo l^n des variétés l-adiques.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="10-03-21">
+            <td class="date">10 mars 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Antoine Sedillot</strong>
+                </dd>
+                <dd>
+                    Session III-3 (continuation) :<em> Introduction aux groupes de Lie l-adiques, notamment la définition, les propriétés de base, les théorèmes fondamentaux et les estimations de Serre et Oesterlé sur le nombre de points sur la réduction modulo l^n des variétés l-adiques.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="17-03-21">
+            <td class="date">17 mars 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Anna Cadoret</strong>
+                </dd>
+                <dd>
+                    Session III-4 :<em> Stratégie générale de la preuve des théorèmes d'UOI (UOI1 = [CT12] => UOI2 = [CT13]).</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="24-03-21">
+            <td class="date">24 mars 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    relâche
+                </dd>
+            </td>
+          </tr>
+          <tr id="31-03-21">
+            <td class="date">31 mars 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Haohao Liu</strong>
+                </dd>
+                <dd>
+                    Session III-5 :<em> Preuve de UOI1.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="07-04-21">
+            <td class="date">07 avril 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Haohao Liu</strong>
+                </dd>
+                <dd>
+                    Session III-6 :<em> Preuve de UOI2.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="14-04-21">
+            <td class="date">14 avril 2021
+                </td>
+            <td class="talk">
+                <dd>
+                    relâche
+                </dd>
+            </td>
+          </tr>
+          <tr id="21-04-21">
+            <td class="date">21 avril 2021 (Attention : 13h30 - 15h30 !)
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Ziyang Gao</strong>
+                </dd>
+                <dd>
+                    Session IV-1 :<em> De l'équidistribution à la conjecture de Manin-Mumford uniforme. Le point crucial est d'appliquer l'astuce de Ullmo-Zhang sur les familles, et ceci est permis par la construction des sous-variétés non-dégénérées présentée dans la partie II de ce GDT. Nous allons faire un rappel des définitions de l'application de Betti, de la forme de Betti, de non-dégénérescence ainsi que le théorème de construction des sous-variétés non-dégénérées.
+                                    </dd>
+                <dd>
+                    Cet exposé correspond, à part des préparatifs et des rappels, à la Section 4 de <a href="https://arxiv.org/abs/2101.10272">l'article de Kühne</a>.</em>
+                </dd>
+                <dd>
+                    Nous suivons les Sections 8 et 9 du <a href="./articles/SurveyUnifML.pdf">survol</a> (en anglais).
+                </dd>
+            </td>
+          </tr>
+          <tr id="28-04-21">
+            <td class="date">28 avril 2021 (Attention : 14h - 16h !)
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Ziyang Gao</strong>
+                </dd>
+                <dd>
+                    Session IV-2 :<em> Démonstration de l'équidistribution, 1ère partie : analyses des croissances de certains nombres d'intersections. La preuve partage des points communs avec la Session II-5. En particulier,
+                        l'application de Betti et la forme de Betti sont fréquemment utlisées.
+                </dd>
+                <dd>
+                    Cet exposé correspond à la Section 2 de <a href="https://arxiv.org/abs/2101.10272">l'article de Kühne</a>.</em>
+                </dd>
+            </td>
+          </tr>
+          <tr id="05-05-21">
+            <td class="date">5 mai 2021 (Attention : 14h - 16h !)
+                </td>
+            <td class="talk">
+                <dd>
+                    <strong>Antoine Chambert-Loir</strong>
+                </dd>
+                <dd>
+                    Session IV-3 :<em> Démonstration de l'équidistribution, 2ère partie : conclusion par les croissances discutées dans l'exposé précédent, l'inégalité de hauteurs présentée dans la Sesson II-4 (et II-5) et la méthode classique de perturbation (Szpiro-Ullmo-Zhang).
+                </dd>
+                <dd>
+                    Cet exposé correspond à la Section 3 de <a href="https://arxiv.org/abs/2101.10272">l'article de Kühne</a>.</em>
+                </dd>
+            </td>
+          </tr>
+<!--          Session II-8 : <em>La non-dégénérescence de $\mathcal{D}_M(\mathfrak{C}_S^{[M+1]})$, 2ème partie : résoudre le problème d'intersection atypique mentionné ci-dessus. Un résultat de finitude à la Bogomolov (sans preuve !), des bornes supérieure et inférieure de la dimension, la fin de la démonstration. </em> -->
+        </table>
+    </div>
+ 
+ <div id='content'>
+
+ <table style=" text-align: left; width: 100%;" border="0"
+        cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+              
+            <td style="vertical-align: top; text-align: left;"><img
+                style=" width: 340px; height: 248px;" alt="LOGO-EU-ERC"
+                src="images/LOGO-EU-ERC.jpg"><br>
+            </td>
+            <td style="vertical-align: top; text-align: left;"><br>
+              <br>
+              <img style=" width: 240px; height: 160px;" alt="LOGO-IMJPRG"
+                src="images/logo-imj-prg.jpg"></td>
+ 
+          </tr>
+        </tbody>
+      </table>
+ </div>
+ </div>
+  </body>
+</html>

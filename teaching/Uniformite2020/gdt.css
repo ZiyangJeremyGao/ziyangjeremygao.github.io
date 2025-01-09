@@ -1,0 +1,89 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #bbb;
+}
+
+#wrapper {
+    position: absolute;
+    background-color: #E2FCCB;
+    top: 0px;
+    left: 20%;
+    width: 60%;
+}
+
+#header {
+    background-color: #E2FCCB;
+    height: 100%;
+}
+
+#content {
+    clear: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    /*overflow: auto;*/
+    background-color: white;
+    padding-bottom: 0px;
+}
+
+#footer {
+  width: 100%;
+  padding: 1em;
+}
+
+
+
+dl {
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+dt {
+  /*text-align: center;*/
+  font-weight: bold;
+}
+
+
+table {
+  width: 100%;
+  border-bottom: solid 2px #aaa; 
+}
+
+td {
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+td.date {
+  width: 20%;
+}
+
+td.time {
+  text-align: right;
+  padding-right: 20px;
+}
+
+tr.next {
+  background-color: #dde;
+  border: dotted 1px #888;
+}
+
+.fold-button, .unfold-button {
+  cursor: pointer;
+}
+
+.folded .resume, .fold-button {
+  display: none;
+}
+.unfolded .fold-button {
+  display: inline;
+}
+.unfolded .unfold-button {
+  display: none;
+}
+.unfolded .resume {
+  display: block;
+  border-left: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  padding: 5px;
+}
