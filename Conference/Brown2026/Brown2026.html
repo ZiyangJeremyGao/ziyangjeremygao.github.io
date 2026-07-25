@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="splitdate.xsl" />
-  <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
-
-  <xsl:template match="/">
-
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title>Workshop on Arakelov Geometry and Diophantine Geometry</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="content-language" content="fr"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <link rel="stylesheet" href="gdt.css" type="text/css" media="screen" title="default"/>
-    <script type="text/javascript" src="show_hide.js"> </script>
-    <script type="text/javascript" src="stnj.js"> </script>
-    <script type="text/x-mathjax-config">
+<xsl:import href="splitdate.xsl"></xsl:import>
+<xsl:output encoding="UTF-8" indent="yes" method="xml"></xsl:output>
+<xsl:template match="/">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Workshop on Arakelov Geometry and Diophantine Geometry</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="fr" http-equiv="content-language"/>
+<meta content="no-cache" http-equiv="cache-control"/>
+<link href="gdt.css" media="screen" rel="stylesheet" title="default" type="text/css"/>
+<script src="show_hide.js" type="text/javascript"> </script>
+<script src="stnj.js" type="text/javascript"> </script>
+<script type="text/x-mathjax-config">
           MathJax.Hub.Config({
           extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
           jax: ["input/TeX", "output/HTML-CSS"],
@@ -41,154 +36,560 @@
               }
           });
         </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"> </script>
-  </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js" type="text/javascript"> </script>
+<style type="text/css">
+.program-wrapper {
+  margin-top: 1em;
+}
 
+.program-day {
+  margin-bottom: 2.5em;
+}
 
+.program-day h4 {
+  margin: 0 0 0.75em;
+  font-size: 1.2em;
+}
 
- <body onload="javascript:highlight_next(self)">
-      
-      <div id="wrapper">
-      <div id="header">
-      
-      <span style="" lang="FR"></span>
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #666;
+  margin-bottom: 1.5em;
+}
 
+.program-table th,
+.program-table td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.program-table th {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+.program-table th:first-child,
+.program-table td:first-child {
+  width: 18%;
+  white-space: nowrap;
+}
+
+.program-table th:nth-child(2),
+.program-table td:nth-child(2) {
+  width: 20%;
+}
+
+.talk-details summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style-position: outside;
+}
+
+.talk-details summary:hover {
+  text-decoration: underline;
+}
+
+.talk-details summary:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.talk-details .abstract {
+  margin-top: 0.8em;
+}
+
+.talk-details .abstract p {
+  margin: 0.75em 0 0;
+}
+
+.talk-details .abstract p:first-child {
+  margin-top: 0;
+}
+
+.talk-details[open] summary {
+  margin-bottom: 0.75em;
+}
+
+@media (max-width: 760px) {
+  .program-wrapper {
+    overflow-x: auto;
+  }
+
+  .program-table {
+    min-width: 700px;
+  }
+}
+
+.talk-details summary{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  cursor:pointer;
+}
+.talk-details summary::after{
+  content:"▶";
+  margin-left:0.6em;
+  font-size:0.9em;
+}
+.talk-details[open] summary::after{
+  content:"▼";
+}
+.talk-details summary::-webkit-details-marker{
+  display:none;
+}
+
+/* Remove custom disclosure arrows */
+.talk-details summary::after{
+    content:none !important;
+}
+
+/* Keep native marker hidden */
+.talk-details summary::-webkit-details-marker{
+    display:none;
+}
+
+/* Dark blue clickable titles */
+.talk-details summary{
+    color:#0b3d91;
+    font-weight:bold;
+}
+
+.talk-details summary:hover{
+    color:#062b66;
+    text-decoration:underline;
+}
+
+/* Lightning Talks titles */
+.talk-details summary.lightning-title{
+    font-style: italic;
+    font-weight: normal !important;
+}
+
+/* Override the general summary rule for Lightning Talks */
+.talk-details summary.lightning-title,
+.talk-details summary.lightning-title *{
+    font-weight: normal !important;
+    font-style: italic !important;
+    color: #000;
+}
+
+.lightning-talk-title {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #000;
+}
+
+.reception-title{
+  font-style: italic;
+  font-weight: normal;
+  color:#000;
+}
+</style></head>
+<body onload="javascript:highlight_next(self)">
+<div id="wrapper">
+<div id="header">
+<span lang="FR" style=""></span>
 <!-- <div style="background-color:#D7FF33; width:60%; margin: auto;"> -->
-      <h1 style="text-align:center;"><span>Workshop on Arakelov and Diophantine Geometry<br>
-        </span></h1>
-      <h2 style="text-align:center;"><span> (An official <a href="https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/satellite-conferences">ICM 2026 Satellite Conference</a>)
+<h1 style="text-align:center;"><span>Workshop on Arakelov and Diophantine Geometry<br/>
+</span>
+<h2 style="text-align:center;"><span> (An official <a href="https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/satellite-conferences">ICM 2026 Satellite Conference</a>)
       </span></h2>
-      <h3 style="text-align:center;"><span> August 3-7, 2026, at Brown University
+<h3 style="text-align:center;"><span> August 3-7, 2026, at Brown University
       </span></h3>
-
-
-    </div>
+</h1>
 <!-- <div style="width:60%; margin: auto;"> -->
 <div>
- <dl>
-    <h3>Organizers</h3>
-    <p>
-    <dd>
-     <a href="https://ziyangjeremygao.github.io">Ziyang Gao</a>, UCLA
-    </dd>
-    <dd>
-        <a href="https://as.vanderbilt.edu/math/bio/li-wanlin/">Wanlin  Li</a>, Vanderbilt University
-    </dd>
-    <dd>
-        <a href="https://sites.google.com/view/nicole-looper">Nicole  Looper</a>, Brown University
-    </dd>
-    </p>
-    </dl>
-</div>
-
-<div id='content'>
-    <p>
-    <h3>Speakers</h3>
-    <dd>
-        <li>
-            Alexander Betts (Cornell),
-        </li>
-        <li>
-            Gabriel Dill (Neuch&acirc;tel, Switzerland),
-        </li>
-        <li>
-            Jos&eacute; Ignacio Burgos Gil (ICMAT, Madrid),
-        </li>
-        <li>
-            Philipp Habegger (Basel),
-        </li>
-        <li>
-            Klaus K&uuml;nnemann (Regensburg),
-        </li>
-        <li>
-            Aaron Levin (Michigan State),
-        </li>
-        <li>
-            Alice Lin (Harvard),
-        </li>
-        <li>
-            Myrto Mavraki (Toronto),
-        </li>
-        <li>
-            Jackson Morrow (U North Texas),
-        </li>
-        <li>
-            Riccardo Pengo (Messina, Sicily),
-        </li>
-        <li>
-            Farbod Shokrieh (UW Seattle),
-        </li>
-        <li>
-            Joseph Silverman (Brown),
-        </li>
-        <li>
-            Yunqing Tang (Berkeley),
-        </li>
-        <li>
-            Isabel Vogt (Brown),
-        </li>
-        <li>
-            Boya Wen (Richmond),
-        </li>
-        <li>
-            Junyi Xie (BICMR),
-        </li>
-        <li>
-            Jit Wu Yap (MIT/National University of Singapore),
-        </li>
-        <li>
-            Xinyi Yuan (BICMR),
-        </li>
-        <li>
-            Shou-Wu Zhang (Princeton).
-        </li>
-
-    </dd>
-    </p>
-</div>
-
-
-
-
-<div>
- <dl>
-    <h3>Registration</h3>
-    <p>
-    To register for the conference, please fill in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdp1oonCKDKF_N7AzpPbfYGKs_KVDmGl8YJKKlF1Q4Kaq8pWA/viewform?usp=publish-editor">google form</a> by May 31. Limited funding may be available for postdocs and graduate students.
-    </p>
-</dl>
-</div>
-
-
-
-
-
-
-<div id='content'>
-<!-- <div style="width:60%; margin: auto;"> -->
+<dl>
+<h3>Organizers</h3>
 <p>
-    <h3>Program</h3>
-    <dd>
-        TBA
+<dd>
+<a href="https://ziyangjeremygao.github.io">Ziyang Gao</a>, UCLA
+    </dd>
+<dd>
+<a href="https://as.vanderbilt.edu/math/bio/li-wanlin/">Wanlin  Li</a>, Vanderbilt University
+    </dd>
+<dd>
+<a href="https://sites.google.com/view/nicole-looper">Nicole  Looper</a>, Brown University
     </dd>
 </p>
+</dl>
 </div>
-
 <div id="content">
-  <table style="width: 100%; border-collapse: collapse;" border="0" cellpadding="2" cellspacing="2">
-    <tbody>
-      <tr>
-        <td style="vertical-align: middle; text-align: center; width: 50%;">
-          <img style="width: 248px; height: 248px; display: inline-block;" alt="LOGO-NSF" src="NSFLogo.jpg">
-        </td>
-        
-        <td style="vertical-align: middle; text-align: center; width: 50%;">
-          <img style="width: 248px; height: 248px; display: inline-block;" alt="LOGO-NTF" src="NTFlogo.png">
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<p>
+<h3>Speakers</h3>
+<dd>
+<li>
+            Alexander Betts (Cornell),
+        </li>
+<li>
+            Gabriel Dill (Neuchtel, Switzerland),
+        </li>
+<li>
+            Jos Ignacio Burgos Gil (ICMAT, Madrid),
+        </li>
+<li>
+            Philipp Habegger (Basel),
+        </li>
+<li>
+            Klaus Knnemann (Regensburg),
+        </li>
+<li>
+            Aaron Levin (Michigan State),
+        </li>
+<li>
+            Alice Lin (Harvard),
+        </li>
+<li>
+            Myrto Mavraki (Toronto),
+        </li>
+<li>
+            Jackson Morrow (U North Texas),
+        </li>
+<li>
+            Riccardo Pengo (Messina, Sicily),
+        </li>
+<li>
+            Farbod Shokrieh (UW Seattle),
+        </li>
+<li>
+            Joseph Silverman (Brown),
+        </li>
+<li>
+            Yunqing Tang (Berkeley),
+        </li>
+<li>
+            Isabel Vogt (Brown),
+        </li>
+<li>
+            Boya Wen (Richmond),
+        </li>
+<li>
+            Junyi Xie (BICMR),
+        </li>
+<li>
+            Jit Wu Yap (MIT/National University of Singapore),
+        </li>
+<li>
+            Xinyi Yuan (BICMR),
+        </li>
+<li>
+            Shou-Wu Zhang (Princeton).
+        </li>
+</dd>
+</p>
 </div>
- 
-  </body>
-</html>
+<div>
+<dl>
+<h3>Location</h3>
+<p>MacMillan Hall, Room 115, located at 167 Thayer Street, Providence.<br/><br/>The main entrance is through the Science Park entrance, on the north side of the building. Please note that all campus buildings are card swipe access only, so there will be someone at this entrance to let you in.<br/><br/>Check-in will be held in the lobby of MacMillan Hall on Monday, August 3rd before the first talk. Please arrive a bit early to check in and pick up your name tag. It is important that you keep this tag with you throughout the workshop.</p></dl>
+</div>
+<div id="content"><h3>Program</h3><div class="program-wrapper"><section class="program-day">
+<h4>Monday, August 3, 2026</h4>
+<table class="program-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Speaker</th>
+<th>Title/Abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:30 AM–10:30 AM</td>
+<td>Xinyi Yuan</td>
+<td>
+<details class="talk-details">
+<summary>On Vojta’s Proof of the Mordell Conjecture</summary>
+<div class="abstract">
+<p>The Mordell conjecture was originally proved by Faltings in 1983, and a second proof was given by Vojta in 1989. In this talk, I will describe Vojta’s proof with a simplification by using my arithmetic Siu inequality.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>11:00 AM–12:00 PM</td>
+<td>Isabel Vogt</td>
+<td>
+<details class="talk-details">
+<summary>Unlikely Ramification of Algebraic Points on Curves</summary>
+<div class="abstract">
+<p>A slogan of arithmetic geometry is that “geometry controls arithmetic”: as the geometric complexity increases, the arithmetic also becomes more complicated. In this talk, I will discuss results in this direction that show that there are many number fields that cannot appear as the residue field of points on a fixed curve of genus at least 2. This is joint work with Bianca Viray.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>2:00 PM–3:00 PM</td>
+<td>Jackson Morrow</td>
+<td><details class="talk-details"><summary>A non-Archimedean Ax–Lindemann theorem for certain p-adically uniformized Shimura varieties</summary><div class="abstract"><p>The Ax–Lindemann conjecture is a functional transcendence statement in arithmetic geometry concerning the uniformization map of an arithmetic variety. Klingler–Ullmo–Yafaev proved this conjecture for the complex analytification of a Shimura variety. I will present a non-Archimedean analogue of this result for certain p-adically uniformized Shimura varieties, in particular quaternionic Shimura varieties and a class of PEL-type unitary Shimura varieties treated by Rapoport–Zink. Our proof has two main ingredients. First, we prove that the complex and p-adic uniformization maps for these Shimura varieties satisfy the same system of differential equations—an extension of a theorem of André from Shimura curves to this broader setting. Second, we use differential algebra and model theory to show that the complex and p-adic Ax–Lindemann statements are equivalent in this setting. This is joint work with Marc-Hubert Nicole and Giovanni Rosso.</p></div></details></td>
+</tr>
+<tr>
+<td>3:30 PM–4:30 PM</td>
+<td>Alex Betts</td>
+<td>
+<strong>TBA</strong>
+</td>
+</tr>
+</tbody>
+</table>
+</section><section class="program-day">
+<h4>Tuesday, August 4, 2026</h4>
+<table class="program-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Speaker</th>
+<th>Title/Abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:30 AM–10:30 AM</td>
+<td>Jit Wu Yap</td>
+<td>
+<details class="talk-details">
+<summary>Uniform boundedness of torsion points for abelian varieties over function fields</summary>
+<div class="abstract">
+<p>Let K be the function field of a curve B over C and A/K an abelian variety with trivial trace. The uniform boundedness conjecture predicts that the number of torsion points in A(K) is bounded solely in terms of dim A and K. In this talk, I will present a proof of this conjecture and also discuss some related questions. This is joint work with Nicole Looper.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>11:00 AM–12:00 PM</td>
+<td>Riccardo Pengo</td>
+<td>
+<details class="talk-details">
+<summary>Explicit bounds and algorithms to find torsion points</summary>
+<div class="abstract">
+<p>A celebrated conjecture by Manin and Mumford, now a theorem, predicted the distribution of torsion points in subvarieties of (abelian) group varieties. Our talk will be focused on the explicit aspects surrounding these conjectures, with the objective of finding the aforementioned torsion points in explicit infinite families of varieties. This talk will be based on joint work in progress with Evelina Viada.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>2:00 PM–3:00 PM</td>
+<td>Boya Wen</td>
+<td>
+<details class="talk-details">
+<summary>Local systems over graphs and CM cycles over Shimura Curves</summary>
+<div class="abstract">
+<p>A Shimura Curve parametrizes principally polarized abelian surfaces with quaternion multiplication by a quaternion algebra B. At a prime where B ramifies, the Shimura curve reduces to a split degenerate curve whose dual graph is a finite regular graph of degree p + 1. In this talk, we will introduce local systems of spheres and inner product spaces on such graphs, as well as harmonic analysis on them. We will also connect these constructions to arithmetic intersections of CM cycles in a universal abelian surface above the Shimura curve.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>3:30 PM–4:15 PM</td>
+<td>Lightning Talks</td>
+<td>
+<span class="lightning-talk-title">Hanson Hao, Zhelun Chen, Xinyu Fang, Dan Townsend, Xiao Zhong, Yuta Nakayama, Soheil Memarian</span>
+</td>
+</tr>
+<tr>
+<td>4:30 PM–5:30 PM</td>
+<td>Shouwu Zhang</td>
+<td>
+<details class="talk-details">
+<summary>Adelic Line Bundles: From Canonical Heights to Arithmetic Positivity</summary>
+<div class="abstract">
+<p>Canonical heights play a fundamental role in arithmetic geometry, from the Mordell–Weil theorem to the Birch–Swinnerton-Dyer conjecture. In 1995, I introduced the notion of adelic line bundles, providing a geometric interpretation of canonical heights as degrees of metrized line bundles over all places of a number field. This viewpoint unifies Archimedean and non-Archimedean geometry and brings analytic methods into arithmetic geometry.</p>
+<p>In this lecture, I will explain how adelic line bundles lead naturally to adelic intersection theory, Monge–Ampère measures, and the equidistribution of small points, with applications to the Bogomolov conjecture and arithmetic dynamics. I will then describe recent joint work with Xinyi Yuan that extends the theory to quasi-projective varieties, thereby making it possible to construct canonical adelic metrics on moduli spaces. These developments reveal new positivity phenomena in arithmetic geometry and provide a conceptual framework for studying heights of algebraic cycles and related arithmetic questions.</p>
+</div>
+</details>
+</td>
+</tr>
+</tbody>
+</table>
+</section><section class="program-day">
+<h4>Wednesday, August 5, 2026</h4>
+<table class="program-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Speaker</th>
+<th>Title/Abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00 AM–10:00 AM</td>
+<td>Myrto Mavraki</td>
+<td>
+<details class="talk-details">
+<summary>Special Subvarieties in Families of endomorphisms of (P¹)ⁿ</summary>
+<div class="abstract">
+<p>Let Φ = (f₁, …, fₙ) be an algebraic family of coordinatewise rational maps on (P¹)ⁿ, and let X be a family of subvarieties. When is X dynamically special—for instance, preperiodic—for a Zariski-dense set of parameters? Inspired by Pink’s conjectures in arithmetic geometry and recent work of Gao–Habegger, Yuan and Zhang, I will discuss a geometric answer to this question. I will explain its connections with bifurcation theory in complex dynamics and the positivity of canonical adelic line bundles, and indicate applications to uniformity questions for preperiodic points and invariant subvarieties. This is joint work with Laura DeMarco.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>10:30 AM–11:30 AM</td>
+<td>Junyi Xie</td>
+<td>
+<details class="talk-details">
+<summary>Abelian points in backward orbits</summary>
+<div class="abstract">
+<p>Let K be a number field and let f be a polarized self-map of a normal projective variety X. For a point x in X, consider the field generated by all iterated preimages of x under f. I will explain when this field extension is virtually abelian. The answer is exactly the exceptional case: f must be an exceptional map with complex multiplication, and x must be preperiodic. This proves a conjecture of Andrews and Petsche and extends it to higher dimensions.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>12:00 PM–1:00 PM</td>
+<td>Gabriel Dill</td>
+<td>
+<details class="talk-details">
+<summary>Intersecting a curve with multiples of another curve</summary>
+<div class="abstract">
+<p>I will present joint work in progress with Fabrizio Barroero and Lars Kühne on the abelian analogue of a question of Levin, which has appeared in Zannier’s book on unlikely intersections more than a decade ago. Namely, we study the locus of points that lie on a given curve and have an integer multiple lying on another given curve.</p>
+</div>
+</details>
+</td>
+</tr>
+</tbody>
+</table>
+</section><section class="program-day">
+<h4>Thursday, August 6, 2026</h4>
+<table class="program-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Speaker</th>
+<th>Title/Abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:30 AM–10:30 AM</td>
+<td>José Burgos Gil</td>
+<td>
+<details class="talk-details">
+<summary>The essential minimum of height functions on the projective line</summary>
+<div class="abstract">
+<p>The essential minimum of a height function is the minimal value that the height function can attain at generic points. There are methods to compute upper and lower bounds for the essential minimum. In a joint work with Binggang Qu, Ricardo Menares, and Martin Sombra, we prove using linear programming techniques that the difference between the upper and lower bounds can be made arbitrarily small. Therefore, one can devise a theoretical algorithm to compute the essential minimum with arbitrary precision and thus the essential minimum is a “computable” real number. This result has applications in several classical problems like the integral Chebyshev constant of the unit interval, the spectrums of the Zhang-Zagier and the Faltings heights and the asymptotic behaviour of the length of the shortest vector in the lattice associated with the Grassmannian Gr(2, 4).</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>11:00 AM–12:00 PM</td>
+<td>Klaus Künnemann</td>
+<td>
+<details class="talk-details">
+<summary>A tropical formula for non-archimedean local heights</summary>
+<div class="abstract">
+<p>We report on joint work with José Burgos and Walter Gubler. Let X be a smooth projective variety over a non-archimedean field. Using tropicalization, one can introduce real-valued forms and currents on the non-archimedean analytification of X. We discuss how these can be used to compute non-archimedean local heights.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>2:00 PM–3:00 PM</td>
+<td>Alice Lin</td>
+<td>
+<details class="talk-details">
+<summary>Finiteness of heights in isogeny classes of motives</summary>
+<div class="abstract">
+<p>Using integral <em>p</em>-adic Hodge theory, Kato and Koshikawa define a generalization of the Faltings height of an abelian variety to motives defined over a number field. Assuming the adelic Mumford-Tate conjecture, we prove a finiteness property for heights in the isogeny class of a motive, where the isogenous motives are not required to be defined over the same number field. This expands on a result of Kisin and Mocz for the Faltings height in isogeny classes of abelian varieties.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>3:30 PM–4:15 PM</td>
+<td>Lightning Talks</td>
+<td>
+<span class="lightning-talk-title">Ying Wang, Wenbin Luo, Michal Szachniewicz, Zheng Xiao, Mithun Padinhare, Yu Fu</span>
+</td>
+</tr>
+<tr>
+<td>4:30 PM–5:30 PM</td>
+<td>Joseph H. Silverman</td>
+<td>
+<details class="talk-details">
+<summary>Positivity Properties of Fourier Expansions of Local Heights on Abelian Varieties</summary>
+<div class="abstract">
+<p>Let K be a complete local field, and let A/K be an abelian variety of dimension g. If A has good reduction, then the intersection pairing P · D on the Néron model of A gives a local canonical height A(K) ∖ |D| → R associated to the ample effective divisor D. If A has split multiplicative reduction, there is a Bernoulli correction term that takes on both positive and negative values. In the case g = 1, this term is given by the periodic 2nd Bernoulli polynomial B₂(T) = T² − T + 1/6 whose classical Fourier expansion has non-negative coefficients. For g = 2, Nicole Looper and I investigated the analogous 2-variable periodic Bernoulli polynomial B₂(X, Y). We gave explicit formulas for the Fourier expansion of B₂(X, Y) and showed how weighted averages could be used to eliminate the negative Fourier coefficients. In this talk I will describe the g = 1 and g = 2 cases, briefly mention some motivating applications, and raise some questions in higher dimensions.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>5:40 PM</td>
+<td>Reception</td>
+<td><span class="reception-title">Kasper Multipurpose Room in Faunce House, at 75 Waterman Street</span></td>
+</tr>
+</tbody>
+</table>
+</section><section class="program-day">
+<h4>Friday, August 7, 2026</h4>
+<table class="program-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>Speaker</th>
+<th>Title/Abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00 AM–10:00 AM</td>
+<td>Philipp Habegger</td>
+<td>
+<details class="talk-details">
+<summary>Specializing Linear Recurrence Sequences at Roots of Unity</summary>
+<div class="abstract">
+<p>The Skolem-Mahler-Lech Theorem characterizes the vanishing members of a linear recurrence sequence. Recently, Bacik gave an effective proof of this classical theorem for four term linear recurrence sequences in the number field case. For orders greater than four, no effective proof is known. In other words, given a general linear recurrence sequence, we know of no algorithm that is guaranteed to determine the indices at which the sequence vanishes.</p>
+<p>We consider linear recurrence sequences of rational functions and study when sequence members vanish at a root of unity. Bilu-Luca and Ostafe-Shparlinski proved finiteness results for linear recurrence sequences of order two. I will report on a new finiteness result for linear recurrence sequences of order three. We require linear forms in logarithms combined with the Pila-Zannier strategy as well as the function field abc Conjecture.</p>
+<p>This is joint work in progress with Alina Ostafe and David Masser.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>10:30 AM–11:30 AM</td>
+<td>Yunqing Tang</td>
+<td>
+<details class="talk-details">
+<summary>The arithmetic of power series and applications to irrationality</summary>
+<div class="abstract">
+<p>We will first briefly discuss our approach to prove irrationality of certain periods such as certain product of two log values. The key ingredient is an arithmetic holonomy theorem built upon earlier work by André, Bost, Charles (and others) on arithmetic algebraization theorems via Arakelov theory. We will then discuss our result on irrationality measures and a proof of transcendence of π in our framework. This is joint work with Frank Calegari and Vesselin Dimitrov.</p>
+</div>
+</details>
+</td>
+</tr>
+<tr>
+<td>12:00 PM–1:00 PM</td>
+<td>Aaron Levin</td>
+<td>
+<details class="talk-details">
+<summary>Some applications of Diophantine approximation to integral points and unlikely intersections</summary>
+<div class="abstract">
+<p>We discuss recent results in Diophantine approximation, with a focus on heights attached to closed subschemes of higher codimension and greatest common divisor type inequalities. We then give some applications to integral points on surfaces, and discuss relations between GCD inequalities and a new unlikely intersection conjecture. This is joint work with Zheng Xiao and Keping Huang.</p>
+</div>
+</details>
+</td>
+</tr>
+</tbody>
+</table>
+</section></div></div>
+<div id="content">
+<table border="0" cellpadding="2" cellspacing="2" style="width: 100%; border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="vertical-align: middle; text-align: center; width: 50%;">
+<img alt="LOGO-NSF" src="NSFLogo.jpg" style="width: 248px; height: 248px; display: inline-block;"/>
+<td style="vertical-align: middle; text-align: center; width: 50%;">
+<img alt="LOGO-NTF" src="NTFlogo.png" style="width: 248px; height: 248px; display: inline-block;"/>
+</td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></body></html></xsl:template></xsl:stylesheet>
